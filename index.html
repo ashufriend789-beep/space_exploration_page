@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Space Exploration App</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="hero">
+            <img id="logo" src="images/spacexnew.png">dff
+            <h1 id="title">Join the <span class="special">Exploration</span></h1>
+            <button class="apply-btn">Apply!</button>
+            <!-- <img src="images/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg" width="100%"> -->
+        </div>
+        <h3>Terms and conditons apply</h3>
+    </body>
+</html>
+
+
+<!--Things that i learned in this
+1.background-image is a property of css not html. It needs to write in css file through body(because we want image to span around whole body). background-image:url("");
+url() -> it is a css function used to specify the image path.
+2.Background images do not automatically scale like <img> tags. They just repeat or stay in original size unless you tell them otherwise.
+background-image:url() property use backgorund-size:cover; and backgruond-repeate:no-repeate; to show their effect on browser unlike img tag use width:100%; and both are differnt.
+
+3.Centering the element by using the text-aling:center; in the body tag
+how does it works: since h1 is block level but the text inside h1 is inline so the property will be applied to the text i.e. concept of property showing inheritance.
+                 : since button is a inline-block so All inline or inline-block children of body are treated like inline text for alignment.
+
+Note: browser lays content in two direction 
+1.horizontal(inline flow) 2.vertical(block flow)
+Every element participate in one of these direction.
+Now:
+    text-align:center; it doesn't mean align items to the center.
+        it means make the element inline inside a block.
+
+Now block level elements are: <p>,<div>,<h1..>
+    inline level elements are: <span>,<a>,text
+    inline-block are:<img>,<button>,<input> :: block like box, behave like text.
+    SO u can add button and make it center but u can also set length and widht with padding.okay
+
+Special Note:
+Use text-align when:
+You’re centering text
+You’re centering button, img inline
+
+Use margin: auto when:
+You’re centering a single block
+You know its width
+
+Use Flexbox when:
+You’re building layouts
+You want vertical + horizontal centering
+You have multiple elements
+
+
+4.again Buttons do NOT always inherit font-family from body.
+Form elements (button, input, select, textarea) don't inheritace, since inhertitance is blocked so we need to give font-family again in css of button selector.
+or u can use font-family:inherit; // this also works 
+It tells the element to use the same font as its parent.
+Why it exists?
+Some elements (like button, input, textarea) do NOT inherit font by default.
+So this forces them to match the surrounding text.
+
+5.about property 
+@font-face{
+    /*It use two following propery */
+    src:url("specific_font_filename.ttf"); /*this tells the source of the font file*/
+    font-family:xyz; /*alias to the desired font*/
+    /*then use the above font-family:xyz; this to the elements where u wanna apply the specific font*/
+}
+
+6.Underline a particular part using span(because span are inline, we will provide a class and then use that)
+and these properties when we use the selector to target the text inside span,
+text-decoration-line: underline;
+text-decoration-thickness: 3px;   /* underline thickness */
+text-underline-offset: 6px;       /* space between text & underline */
+border-bottom:1px solid white; like this also .
+three in one way using border-bottom; /*this is not a real underline it's a border*/
+
+7.id in html attribute like class
+id is used for one element once,  class is used for group of elements.
+# is used to target the element in css to apply properties.
+so here since the spacex image is only one so we will use id for that.
+
+8.Change /  i am goint to change the background jpg to gif. by using a 
+.webp image format, it is also a image but it's like a gif.
+
+9.Change/ i am going to give different color to our text join the explorationa,apply a different color
+from the jpeg itself because that can make our website look more interesting.
+I use coolors for this to get a desired color from color pallets and then provide it to the text.
+
+
+10. Big Change / Layout Refactor
+Till here everything was fine. Then I decided to add a 
+"Terms and conditions apply" text, but I wanted it to look
+separate from the main hero content on a white section.
+
+So I created a `.hero` section.
+The hero section is used for the first impression of the website
+and contains the most important elements:
+- Logo
+- Heading
+- Button
+
+After moving these elements into the hero section,
+the layout changed because a div only takes the height
+of its content by default.
+
+To fix this, I moved the background-image related properties
+from the `body` to the `.hero` class and used:
+
+`min-height: 100vh;`
+This ensures the hero section always covers the full
+viewport height, regardless of screen size.
+I also added `margin: 0` to the body to remove the default
+8px browser margin, allowing the hero section to touch
+the edges of the browser completely.
+
+
+11.about text shadows. It is used to crate shadows and blur effect around the text.
+syntax: text-shadow:apx bpx cpx color;
+a>0 means shadow in right 
+b>0 means shadow in down 
+cpx decides the blurness
+color decides shadow color
+ex. text-shadow:0px 0px 4px black; used for h1 tag
+-->
